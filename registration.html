@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="registration_style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registration</h1>
+      <form id="registration-form">
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <input type="tel" id="phone" placeholder="Phone Number" />
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="repassword" placeholder="Re-enter Password">
+        <button type="submit">Sign Up</button>
+        <div class="loader" id="loader"></div>
+      </form>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="firebase-config-script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/google-libphonenumber/3.2.16/libphonenumber.js"></script>
+    <script src="registration_script.js"></script>
+  </body>
+</html>
+
+
