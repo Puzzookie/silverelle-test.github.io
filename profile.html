@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" type="text/css" href="profile_style.css">
+  </head>
+  <body>
+    <div id="container">
+      <div style="display: block" class="loader" id="loader"></div>
+    </div>
+
+    <div style="display: none;" id="textBody">
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="menu-items">
+          <button class="menu-button" onclick="viewHome()">Home</button>
+          <button class="menu-button">My Profile</button>
+          <button class="menu-button" onclick="viewAppointments()">My Appointments</button>
+          <button style="visibility:hidden;"class="menu-button"></button>
+          <button class="menu-button" onclick="logout()">Log out</button>
+        </div>
+      </div>
+      <h2 style="text-align: center;">Profile</h2>
+      <form id="registration-form">
+        <p style="text-align: left;">Email:</p>
+        <p id="email"></p>
+        <p style="text-align: left;">Password:</p>
+        <button onclick="onChangePassword()" type="submit_password">Change Password</button>
+        <p style="text-align: left;">First Name:</p>
+        <input type="text" id="firstName" placeholder="First Name">
+        <p style="text-align: left;">Last Name:</p>
+        <input type="text" id="lastName" placeholder="Last Name">
+        <p style="text-align: left;">Phone Number:</p>
+        <input type="tel" id="phone" placeholder="Phone Number (+1234567890)" />
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="firebase-config-script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/google-libphonenumber/3.2.16/libphonenumber.js"></script>
+    <script src="profile_script.js"></script>
+  </body>
+</html>
+
+
